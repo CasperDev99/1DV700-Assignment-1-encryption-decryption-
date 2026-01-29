@@ -34,10 +34,15 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'encryption.decryption.App'
+    mainClass = 'encryption.decryption.Main'
 }
 
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+}
+
+run {
+    standardInput = System.in
+    workingDir = rootDir
 }
