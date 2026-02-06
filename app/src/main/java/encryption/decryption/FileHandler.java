@@ -8,6 +8,9 @@ import java.io.IOException;
 
 public class FileHandler {
 
+    /**
+     * Reads the entire contents of a file into a String.
+     */
     public String readFile(String filename) throws IOException {
         StringBuilder content = new StringBuilder();
         
@@ -22,13 +25,21 @@ public class FileHandler {
         return content.toString();
     }
     
-
+    /**
+     * Writes the given content to a file.
+     * Overwrites the file if it already exists.
+     */
     public void writeFile(String filename, String content) throws IOException {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
             writer.write(content);
         }
     }
  
+     
+    /**
+     * Removes the final newline character from the content
+     * to prevent an extra blank line at the end of the file.
+     */
     private void removeTrailingNewline(StringBuilder content) {
         if (content.length() > 0) {
             content.setLength(content.length() - 1);

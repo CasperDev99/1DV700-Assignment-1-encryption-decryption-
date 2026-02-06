@@ -5,6 +5,9 @@ import java.util.List;
 
 public class RailFenceDecryptor {
 
+    /**
+     * Decrypts the given ciphertext using the specified number of rails.
+     */
     public String decrypt(String text, int rails) {
         if (rails <= 1 || text.length() <= 1) {
             return text;
@@ -15,6 +18,10 @@ public class RailFenceDecryptor {
         return readFromFenceInOrder(fence, rails, text.length());
     }
     
+    /**
+     * Calculates how many characters belong to each rail
+     * by simulating the zigzag traversal used in encryption.
+     */
     private int[] calculateRailLengths(int textLength, int rails) {
         int[] lengths = new int[rails];
         int rail = 0;
@@ -28,11 +35,17 @@ public class RailFenceDecryptor {
         
         return lengths;
     }
-    
+
+    /**
+     * Determines the next rail index based on direction.
+     */
     private int moveToNextRail(int currentRail, int direction, int rails) {
         return currentRail + direction;
     }
     
+    /**
+     * Reverses direction when reaching the top or bottom rail.
+     */
     private int updateDirection(int rail, int rails, int direction) {
         if (rail == 0) {
             return 1;
@@ -42,6 +55,10 @@ public class RailFenceDecryptor {
         return direction;
     }
     
+    /**
+     * Splits the ciphertext into separate rails based on
+     * the calculated rail lengths.
+     */
     private List<StringBuilder> extractRails(String text, int[] railLengths) {
         List<StringBuilder> fence = new ArrayList<>();
         int index = 0;
@@ -56,6 +73,10 @@ public class RailFenceDecryptor {
         return fence;
     }
     
+    /**
+     * Reads characters from the fence in zigzag order
+     * to reconstruct the original plaintext.
+     */
     private String readFromFenceInOrder(List<StringBuilder> fence, int rails, int textLength) {
         StringBuilder decrypted = new StringBuilder();
         int rail = 0;

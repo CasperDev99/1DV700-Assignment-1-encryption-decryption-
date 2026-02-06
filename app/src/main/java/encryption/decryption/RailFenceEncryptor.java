@@ -5,6 +5,10 @@ import java.util.List;
 
 public class RailFenceEncryptor {
 
+    
+    /**
+     * Encrypts the given text using the specified number of rails.
+     */
     public String encrypt(String text, int rails) {
         if (rails <= 1 || text.length() <= 1) {
             return text;
@@ -15,6 +19,9 @@ public class RailFenceEncryptor {
         return readFromFence(fence);
     }
     
+    /**
+     * Creates an empty fence structure with one StringBuilder per rail.
+     */
     private List<StringBuilder> createFence(int rails) {
         List<StringBuilder> fence = new ArrayList<>();
         for (int i = 0; i < rails; i++) {
@@ -23,6 +30,9 @@ public class RailFenceEncryptor {
         return fence;
     }
     
+    /**
+     * Fills the fence with characters from the text in a zigzag pattern.
+     */
     private void fillFenceWithText(List<StringBuilder> fence, String text, int rails) {
         int rail = 0;
         int direction = 1;
@@ -34,10 +44,16 @@ public class RailFenceEncryptor {
         }
     }
     
+    /**
+     * Calculates the next rail index based on the current direction.
+     */
     private int moveToNextRail(int currentRail, int direction, int rails) {
         return currentRail + direction;
     }
     
+    /**
+     * Updates the direction when reaching the top or bottom rail.
+     */
     private int updateDirection(int rail, int rails, int direction) {
         if (rail == 0) {
             return 1;
@@ -47,6 +63,10 @@ public class RailFenceEncryptor {
         return direction;
     }
     
+    /**
+     * Reads the characters from the fence row by row to form
+     * the final encrypted string.
+     */
     private String readFromFence(List<StringBuilder> fence) {
         StringBuilder encrypted = new StringBuilder();
         for (StringBuilder railContent : fence) {

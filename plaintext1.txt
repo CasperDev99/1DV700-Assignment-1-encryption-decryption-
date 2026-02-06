@@ -1,0 +1,38 @@
+***************************************************************************************************
+*                                                                                                 *
+*                                Secret message - Top Secret                                      *
+*                                                                                                 *
+*                      May only be read by security passed personnel                              *
+*                                                                                                 *
+***************************************************************************************************
+
+       And your names here: Casper Björlin
+
+      Add your Message here: This message is written as part of an academic exercise in cryptography, but it also reflects on the
+      importance of privacy, communication, and trust in the digital age. Throughout history, humans have always searched for ways
+      to protect information. From ancient substitution ciphers to modern encryption algorithms, the need to communicate securely has
+      remained constant even as technology has evolved.
+
+      In today’s world, information travels faster than ever before. Messages can be sent across the globe in seconds, yet this convenience
+      also introduces new risks. Personal data, private conversations, and sensitive information are constantly exposed to potential interception.
+      Encryption serves as a safeguard, ensuring that only the intended recipient can understand the message. Without encryption, privacy would be
+      nearly impossible to maintain.
+
+      Cryptography is not only about secrecy but also about integrity and trust. When a message is encrypted, it provides confidence that the content
+      has not been altered during transmission. This is especially important in fields such as banking, healthcare, and government communication, where
+      accuracy and confidentiality are critical. Even in everyday life, encryption protects emails, passwords, and online transactions that people rely on daily.
+
+      Learning about classical ciphers such as substitution and transposition helps build a foundation for understanding more advanced cryptographic systems.
+      Although these older methods are no longer secure by modern standards, they demonstrate key concepts such as confusion and diffusion. By experimenting
+      with these techniques, students gain insight into how complex encryption methods are constructed and why strong security requires multiple layers of protection.
+
+      This secret message itself does not contain classified information, but its purpose is to be transformed into something unreadable to unintended readers. Once encrypted,
+      the text will appear meaningless, even though it still contains a coherent and structured message underneath. This transformation highlights the power of encryption and the
+      importance of correct decryption methods.
+
+      In conclusion, cryptography plays a vital role in modern society. It protects privacy, enables secure communication, and supports trust in digital systems. Understanding the
+      principles behind encryption is an essential skill in a world where information security is increasingly important. This message exists as a simple example of how ordinary text
+      can be protected through cryptographic techniques.
+      
+      
+***************************************************************************************************
